@@ -18,7 +18,6 @@ import { WebDataContext } from "../globalData/GlobalData";
 
 const useStyles = makeStyles((theme) => ({
   searchBoxContainer: {
-    // flex: "1",
     [theme.breakpoints.up("xs")]: {
       width: "60%",
     },
@@ -30,7 +29,6 @@ const useStyles = makeStyles((theme) => ({
 
   optionsStyling: {
     marginRight: "1rem",
-    // width: "60%",
     [theme.breakpoints.up("xs")]: {
       width: "80%",
     },
