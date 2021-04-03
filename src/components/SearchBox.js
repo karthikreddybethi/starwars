@@ -5,7 +5,6 @@ import {
   MenuItem,
   makeStyles,
   TextField,
-  Typography,
 } from "@material-ui/core";
 
 import { motion } from "framer-motion";
@@ -21,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   searchBoxContainer: {
     // flex: "1",
     [theme.breakpoints.up("xs")]: {
-      width: "50%",
+      width: "60%",
     },
 
     [theme.breakpoints.up("md")]: {
@@ -31,7 +30,13 @@ const useStyles = makeStyles((theme) => ({
 
   optionsStyling: {
     marginRight: "1rem",
-    width: "50%",
+    // width: "60%",
+    [theme.breakpoints.up("xs")]: {
+      width: "80%",
+    },
+    [theme.breakpoints.up("md")]: {
+      width: "50%",
+    },
   },
 
   paper: {
@@ -85,9 +90,6 @@ function Header() {
       display="flex"
       justifyContent="space-evenly"
     >
-      <Typography variant="h6" style={{ color: "white", paddingRight: "1rem" }}>
-        Search:
-      </Typography>
       <FormControl className={classes.optionsStyling}>
         <Select
           id="demo-simple-select"
@@ -99,7 +101,7 @@ function Header() {
           MenuProps={{ classes: { paper: classes.paper } }}
         >
           <MenuItem value="" disabled>
-            By
+            Search By
           </MenuItem>
           <MenuItem value={"people"}>By Name</MenuItem>
           <MenuItem value={"films"}>By Movie</MenuItem>
